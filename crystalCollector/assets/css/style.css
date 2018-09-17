@@ -1,1 +1,35 @@
+body {
+    background-image: url(assets/images/background.jpg);
+}
 
+.crystalImage {
+
+padding: 0px;
+margin: 0px;
+
+}
+
+header {
+
+    text-align: center;
+    font-weight: bolder;
+    font-size: 52;
+    height: 75px;
+    
+}
+
+h1 {
+
+    font-size: 75px;
+    font-weight: bolder;
+}
+
+
+.col-lg-3 {
+
+    border: 2px black solid;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+
+}
