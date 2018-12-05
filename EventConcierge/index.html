@@ -4,21 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" href="assets/images/bell.png">
+    <link rel="icon" type="image/png" href="Assets/Images/bell.png">
     <title>Event Concierge - Find your event..!</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- reset css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/reset.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- link to font -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dosis:400,600,700,800|Montserrat:400,500|Raleway:400,500" rel="stylesheet">
     <!-- link to css -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/animate.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Assets/CSS/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="Assets/CSS/animate.css" />
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!-- firebase call -->
     <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
@@ -54,9 +54,9 @@
     <main id="align" class="container-fluid">
             <div class="row menubar">
                 <div class="col-lg-12 menutwo text-center">
-                    <a href="#top-page"><img class='images home-img' src='assets/images/home_100_white.png' alt='Home Page'></a>
-                    <a href="#pagetwo"><img class='images main-img' src='assets/images/main_100_white.png' alt='Main Page'></a>
-                    <a href="#pagethree"><img class='images wish-img' src='assets/images/heart_menu_empty_white.png' alt='Wish List Page'></a>
+                    <a href="#top-page"><img class='images home-img' src='Assets/Images/home_100_white.png' alt='Home Page'></a>
+                    <a href="#pagetwo"><img class='images main-img' src='Assets/Images/main_100_white.png' alt='Main Page'></a>
+                    <a href="#pagethree"><img class='images wish-img' src='Assets/Images/heart_menu_empty_white.png' alt='Wish List Page'></a>
                     <form id="event-formtwo" class="col-sm-12 search2">
                             <input id="search-btntwo" class="submitBtn" type="submit" value="Search"><input type="text" id="search-inputtwo" placeholder=" ex. music orlando">
                     </form>
@@ -148,18 +148,18 @@ var eventUserId = localStorage.getItem("userId");
                             cardList.append(eventDate,eventVenue,eventCity)
                             // divs for the links at the bottom of the card
                         cardLinks = $("<div class='card-body links card-tix eight'>");
-                            eventTix = $("<a href=" + response._embedded.events[i].url + " class='card-link tix-link' target='_blank'><img class='images' src='assets/images/tix_75.png' alt='uber icon' style='width:60px;height:40px;'></a>");
+                            eventTix = $("<a href=" + response._embedded.events[i].url + " class='card-link tix-link' target='_blank'><img class='images' src='Assets/Images/tix_75.png' alt='uber icon' style='width:60px;height:40px;'></a>");
                             eventLatitude = response._embedded.events[i]._embedded.venues[0].location.latitude;
                             eventLongitude = response._embedded.events[i]._embedded.venues[0].location.longitude;
                             eventAdrresstoEncode = response._embedded.events[i]._embedded.venues[0].address.line1;
                             addressEncoded = encodeURI(eventAdrresstoEncode);
-                            uberLink = $("<a href=https://m.uber.com/?client_id=xS6Oh5A9Wn91MhNKDTP4_9vQSmBn5zYA&action=setPickup&pickup[nickname]=MyLocation&pickup[my_location]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103&dropoff[latitude]="+eventLatitude+"&dropoff[longitude]="+eventLongitude+"&dropoff[nickname]="+addressEncoded+"&dropoff[formatted_address]=1%20Telegraph%20Hill%20Blvd%2C%20San%20Francisco%2C%20CA%2094133&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383'default.asp target='_blank class='card-link'><img class='images' src='assets/images/uber_75B.png' alt='uber icon' style='width:75px;height:20px;'></a>");
+                            uberLink = $("<a href=https://m.uber.com/?client_id=xS6Oh5A9Wn91MhNKDTP4_9vQSmBn5zYA&action=setPickup&pickup[nickname]=MyLocation&pickup[my_location]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103&dropoff[latitude]="+eventLatitude+"&dropoff[longitude]="+eventLongitude+"&dropoff[nickname]="+addressEncoded+"&dropoff[formatted_address]=1%20Telegraph%20Hill%20Blvd%2C%20San%20Francisco%2C%20CA%2094133&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383'default.asp target='_blank class='card-link'><img class='images' src='Assets/Images/uber_75B.png' alt='uber icon' style='width:75px;height:20px;'></a>");
                             // wish list button
-                            favImg = $("<img class='fav' alt='Favorite Heart'>").attr("src", "assets/images/fav_empty_75.png").attr("data-wish","false").attr("value",i).attr("data-favImgid", response._embedded.events[i].id);
+                            favImg = $("<img class='fav' alt='Favorite Heart'>").attr("src", "Assets/Images/fav_empty_75.png").attr("data-wish","false").attr("value",i).attr("data-favImgid", response._embedded.events[i].id);
                             // statement to check if the item is already in the wish list
                             $(".wish").each(function(i){
                                     if ($(this).attr("data-wishId") === favImg.attr("data-favImgid")) {
-                                favImg.attr("src", "assets/images/fav_filled_75.png").attr("class","none").attr("value","none")
+                                favImg.attr("src", "Assets/Images/fav_filled_75.png").attr("class","none").attr("value","none")
                                     }   
                                 })
                             
@@ -207,7 +207,7 @@ var eventUserId = localStorage.getItem("userId");
                 //function create the card with the info from the API into the results div
                     displayResults(0);
                   // scroll right button 
-                  scrollRightImg = $("<img class='scroll-rightImg' alt='scroll right'>").attr("src", "assets/images/arrow_white_100_right.png").attr("value", "8");
+                  scrollRightImg = $("<img class='scroll-rightImg' alt='scroll right'>").attr("src", "Assets/Images/arrow_white_100_right.png").attr("value", "8");
                 $(".scroll-right").append(scrollRightImg)
                 
                 window.location.href='#pagetwo'
@@ -222,7 +222,7 @@ var eventUserId = localStorage.getItem("userId");
                       
                        var scrollValueLeft = scrollValue - 8;
                        scrollValueLeft = parseInt(scrollValueLeft)
-                       scrollLeftImg = $("<img class='scroll-leftImg' alt='scroll left'>").attr("src", "assets/images/arrow_white_100_left.png").attr("value", scrollValueLeft);
+                       scrollLeftImg = $("<img class='scroll-leftImg' alt='scroll left'>").attr("src", "Assets/Images/arrow_white_100_left.png").attr("value", scrollValueLeft);
                         $(".scroll-left").append(scrollLeftImg)
                         if (scrollValue > 23){
                         $("#results").empty()
@@ -285,7 +285,7 @@ var eventUserId = localStorage.getItem("userId");
                             var eventLongitude = response._embedded.events[wishItem]._embedded.venues[0].location.longitude;
                             var eventAdrresstoEncode = response._embedded.events[wishItem]._embedded.venues[0].address.line1;
                             var addressEncoded = encodeURI(eventAdrresstoEncode);
-                            var uberLink = "<a href=https://m.uber.com/?client_id=xS6Oh5A9Wn91MhNKDTP4_9vQSmBn5zYA&action=setPickup&pickup[nickname]=MyLocation&pickup[my_location]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103&dropoff[latitude]="+eventLatitude+"&dropoff[longitude]="+eventLongitude+"&dropoff[nickname]="+addressEncoded+"&dropoff[formatted_address]=1%20Telegraph%20Hill%20Blvd%2C%20San%20Francisco%2C%20CA%2094133&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383'default.asp target='_blank class='card-link'><img class='images' src='assets/images/uber_75B.png' alt='uber icon' style='width:75px;height:20px;'></a>"
+                            var uberLink = "<a href=https://m.uber.com/?client_id=xS6Oh5A9Wn91MhNKDTP4_9vQSmBn5zYA&action=setPickup&pickup[nickname]=MyLocation&pickup[my_location]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103&dropoff[latitude]="+eventLatitude+"&dropoff[longitude]="+eventLongitude+"&dropoff[nickname]="+addressEncoded+"&dropoff[formatted_address]=1%20Telegraph%20Hill%20Blvd%2C%20San%20Francisco%2C%20CA%2094133&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383'default.asp target='_blank class='card-link'><img class='images' src='Assets/Images/uber_75B.png' alt='uber icon' style='width:75px;height:20px;'></a>"
                             var eventId = response._embedded.events[wishItem].id;
                                         dataRef.ref('users/' + userId ).push({
                                         userId: userId,
@@ -302,7 +302,7 @@ var eventUserId = localStorage.getItem("userId");
                                         eventId: eventId,
                                         dateAdded: firebase.database.ServerValue.TIMESTAMP
                                         });
-                                    $(this).attr("src", "assets/images/fav_filled_75.png")
+                                    $(this).attr("src", "Assets/Images/fav_filled_75.png")
                                     $(this).attr("class","none")
                                    
                             })
@@ -324,10 +324,10 @@ var eventUserId = localStorage.getItem("userId");
                              eventCity = $("<li class='list-group-item p-1 card-city'>").text(snapshot.val().eventCity);
                             cardList.append(eventDate,eventVenue,eventCity)
                         cardLinks = $("<div class='card-body links card-tix'>");
-                            eventTix = $("<a href=" + snapshot.val().eventTix + " class='card-link tix-link' target='_blank'><img class='images' src='assets/images/tix_75.png' alt='uber icon' style='width:60px;height:40px;'></a>");
+                            eventTix = $("<a href=" + snapshot.val().eventTix + " class='card-link tix-link' target='_blank'><img class='images' src='Assets/Images/tix_75.png' alt='uber icon' style='width:60px;height:40px;'></a>");
                             
                             uberLink = $("<a href=https://m.uber.com/?client_id=xS6Oh5A9Wn91MhNKDTP4_9vQSmBn5zYA&action=setPickup&pickup[nickname]=MyLocation&pickup[my_location]=1455%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103&dropoff[latitude]="+snapshot.val().eventLatitude+"&dropoff[longitude]="+snapshot.val().eventLongitude+"&dropoff[nickname]="+snapshot.val().addressEncoded+"&dropoff[formatted_address]=1%20Telegraph%20Hill%20Blvd%2C%20San%20Francisco%2C%20CA%2094133&product_id=a1111c8c-c720-46c3-8534-2fcdd730040d&link_text=View%20team%20roster&partner_deeplink=partner%3A%2F%2Fteam%2F9383'default.asp target='_blank class='card-link'><img class='images' src='assets/images/uber_75B.png' alt='uber icon' style='width:75px;height:20px;'></a>");
-                            deleteFav = $("<img class='delFav' alt='Remove Icon'>").attr("src","assets/images/delete_60.png").attr('data-id', snapshot.key).attr("data-cardId",(snapshot.val().eventId))
+                            deleteFav = $("<img class='delFav' alt='Remove Icon'>").attr("src","Assets/Images/delete_60.png").attr('data-id', snapshot.key).attr("data-cardId",(snapshot.val().eventId))
                             cardLinks.append(uberLink, eventTix, deleteFav)
                         eachEventCard.append(eventImg,cardBody,cardList,cardLinks)
                         // display results
@@ -338,11 +338,11 @@ var eventUserId = localStorage.getItem("userId");
                     
                             if (idWish == null) {
                             $(".wishListTitle").empty()
-                            $(".wish-img").attr("src", "assets/images/heart_menu_empty_white.png")
+                            $(".wish-img").attr("src", "Assets/Images/heart_menu_empty_white.png")
                             } else {
                             $(".wishListTitle").html("<h1> Wish List</h1>")
-                            $(".arrow-up-div").html("<a href='#pagetwo'><img class='arrow-up' src='assets/images/arrow_white_100.png' alt='scroll up'></a>")
-                            $(".wish-img").attr("src", "assets/images/heart_menu_filled_white.png")
+                            $(".arrow-up-div").html("<a href='#pagetwo'><img class='arrow-up' src='Assets/Images/arrow_white_100.png' alt='scroll up'></a>")
+                            $(".wish-img").attr("src", "Assets/Images/heart_menu_filled_white.png")
                             
                             } 
                         
@@ -359,7 +359,7 @@ var eventUserId = localStorage.getItem("userId");
                             if (wishDelete === undefined){
                             $(".wishListTitle").empty()
                             $(".arrow-up-div").empty()
-                            $(".wish-img").attr("src", "assets/images/heart_menu_empty_white.png")
+                            $(".wish-img").attr("src", "Assets/Images/heart_menu_empty_white.png")
                             window.location.href='#pagetwo'
                                
                             }
