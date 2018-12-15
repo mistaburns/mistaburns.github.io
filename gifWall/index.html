@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Favorite Movies</title>
+    <style type="text/css">
+      button,
+      div,
+      form,
+      input {
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Gif Wall</h1>
+    <div class="container">
+      <div id="categoryButtons"></div>
+      <form id="gif-form">
+        <label for="categoryLabel">Add a category!</label>
+        <input type="text" id="categoryInput"><br>
+        <input id="addButton" type="submit" value="Add a category!">
+      </form>
+    </div>
+
+    <!-- gifs displayed here -->
+    <div id="gifDisplay">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      // Initial array of Categories
+      var category = ["Cats", "Dogs", "Donald Trump", "Cars", "fish"];
+
+
+      // generates the buttons from the array
+      function renderButtons() {
+        $("#categoryButtons").empty();
+        for (var i = 0; i < category.length; i++) {
+          var a = $("<button>");
+          a.addClass("gifCategory");
+          a.attr("data-name", category[i]);
+          a.text(category[i]);
+          $("#categoryButtons").append(a);
+        }
+      }
+
+      renderButtons();
+
+      // function to push user input into array 
+      $("#addButton").on("click", function(event) {
+        event.preventDefault();
+        var newCategory = document.getElementById("categoryInput").value;
+        category.push(newCategory);
+        renderButtons();
+        console.log(category);
+      });
+
+
+      renderButtons();
+
+
+      $(".gifCategory").on("click", function() {
+
+        var terms = $(this).attr("data-name");
+      
+
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+terms+"&api_key=Cdeb3uMaagMZnvJwjk8b9GDeWBD0isha&limit=10";
+
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+          .then(function(response) {
+            console.log(response);
+            
+            for (var i =0; i<response.data.length; i++) {
+              var imageUrl = response.data[i].images.fixed_height.url;
+              // console.log(imageUrl);
+              var gifImage = $("<img>");
+              gifImage.attr("src", imageUrl);
+              gifImage.attr("alt", "gifImage");
+              $("#gifDisplay").prepend(gifImage);
+            }
+          });
+        });
+
+
+
+      // var key = "Cdeb3uMaagMZnvJwjk8b9GDeWBD0isha";
+
+      // var terms = $(".gifCategory").click(function(){
+      //   $(this).attr("data-name");
+      // });
+
+      // var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=Cdeb3uMaagMZnvJwjk8b9GDeWBD0isha&tag="+terms;
+
+      //   // Creating an AJAX call for the specific movie button being clicked
+      //   $.ajax({
+      //   url: queryURL,
+      //   method: "GET"
+      //   }).then(function(response) {
+
+      //   // Creating a div to hold the movie
+      //   var gifDiv = $("<div>");
+
+      //   gifDiv.addClass("gif");
+
+      //   // Putting the entire movie above the previous movies
+      //   $("#divContainer").prepend(gifDiv);
+      //   }
+
+
+    </script>
+
+  </body>
+
+</html>
