@@ -1,0 +1,350 @@
+/* Landing page section */
+#home {
+background: url("../images/mandala.jpg") repeat scroll center center / cover;
+height: 100vh;
+width: 100%;
+}
+
+
+#home .header-content {
+height: 100vh;
+text-align: center;
+width: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.typed {
+font-size: 72px;
+font-weight: 700;
+text-transform: uppercase;
+color: black;
+margin-left: 10px;
+text-shadow: 1px 1px #232323;
+position: relative;
+}
+
+.typed2 {
+    font-size: 52px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color:black;
+    font-weight: 700;
+    margin-left: 10px;
+    text-shadow: 1px 1px #232323;
+}
+
+.typed3 {
+    font-size: 52px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color:black;
+    font-weight: 700;
+    text-shadow: 1px 1px #232323;
+}
+
+/* NavBar Section */
+
+.navbar {
+    background-color: white;
+    border: 2px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+   
+}
+
+.navbar-brand {
+    padding-left: 50px;
+    color: red;
+    font-weight: 900;
+    padding: none;
+}
+
+#navbarName {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar-nav {
+   margin-left: 530px;
+}
+
+#main-nav {
+    overflow: hidden;
+}
+
+.nav-link {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-item {
+    font-weight: bold;
+    color: red;
+    font-size: 24px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* About Section */
+#pageOne {
+    background: url("../images/mandala.jpg") repeat scroll center center / cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#aboutMe {
+    padding-top: 150px;
+}
+
+.aboutHeading {
+    font-size: 52px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color:black;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 1px 1px #232323;
+    border: 0 0 0 5 solid black;
+
+}
+
+.div-img-bg {
+    padding-bottom: 30px;
+    border: 20px solid rgb(107, 105, 105);
+    margin-left: 100px;
+}
+
+
+
+.div-img-bg .about-img img {
+    width: 100%;
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+    margin-top: -60px;
+    margin-left: 20px;
+    height: 400px;
+    object-fit: cover;
+    
+}
+
+
+.aboutContent {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    display: block;
+
+}
+
+div.aboutContent p {
+    margin: 2%;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 24px;
+    
+}
+
+/* Treatments */
+
+#pageTwo {
+    background: url("../images/mandala.jpg") repeat scroll center center / cover;
+    height: 100vh;
+    width: 100%;
+}
+#treatments {
+    padding-top: 150px;
+}
+  
+.navbar-toggler-icon {
+    color: #ffffff;
+}
+
+.typed4 {
+    font-size: 52px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px #232323;
+}
+.priceContent {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+    
+
+.boldNumber {
+    font-weight: 900;
+    display: inline;
+}
+
+.treatmentContent {
+    margin-left: 70px;
+    background-color: white;
+    border: 1px solid white;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    display: block;
+
+}
+
+.treatmentContent2 {
+    margin-right: 70px;
+    background-color: white;
+    border: 1px solid white;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    display: block;
+
+}
+.treatmentTitle {
+    display: inline;
+    margin-left: 15px;
+    font-weight: 700;
+    
+}
+
+.treatmentSub {
+    margin-left: 45px;
+    font-weight: 700;
+}
+
+.deepTissueText {
+    font-weight: 900;
+   
+}
+
+/* booking */
+
+#pageThree {
+    background: url("../images/mandala.jpg") repeat scroll center center / cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#booking {
+    padding-top: 150px;
+ 
+}
+
+#bookingCalendar {
+    height: 550px;
+    width: 1200px;
+    background-color: #232323;
+}
+
+/* Contact */
+
+#pageFour {
+    background: url("../images/mandala.jpg") repeat scroll center center / cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#contact {
+    padding-top: 150px;
+}
+
+#contactContent {
+    background-color: white;
+    border: 1px solid white;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    display: block;
+
+}
+.form-group {
+    border: 3px solid black;
+}
+
+#sendIt {
+    border: 2px solid black;
+}
+
+#contactHeading {
+    font-size: 72px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+}
+  
+.contact-details {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sajune {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+.contact-details li {
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+}
+
+
+#contact  #sendmessage {
+    color: #18d26e;
+    border: 1px solid #18d26e;
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px;
+}
+
+#contact  #errormessage {
+    color: red;
+    display: none;
+    border: 1px solid red;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin: 15px;
+}
+
+#contact #sendmessage.show, #contact #errormessage.show, #contact .show {
+    display: block;
+}
+
+#contact .validation {
+    color: red;
+    display: none;
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
